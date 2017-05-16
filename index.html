@@ -16,204 +16,27 @@
 <div id='map'></div>
     <script>
 
-	var simple = {
-	"version" : 8,
-	"sources" : {
-		"esri" : {
-			"type" : "vector",
-			"url" : "https://basemaps.arcgis.com/b2/arcgis/rest/services/World_Basemap/VectorTileServer"
-		}
-	},
-	"layers" : [{
-			"id" : "Boundary line/Disputed admin5",
-			"type" : "line",
-			"source" : "esri",
-			"source-layer" : "Boundary line",
-			"filter" : ["==", "_symbol", 11],
-			"minzoom" : 16,
-			"layout" : {
-				"line-join" : "round"
-			},
-			"paint" : {
-				"line-color" : "#9DA0A2",
-				"line-width" : {
-					"base" : 1.2,
-					"stops" : [[14, 1.6], [17, 1.6]]
-				},
-				"line-dasharray" : [6.0, 3.0]
-			}
-        }, {
-			"id" : "Boundary line/Disputed admin4",
-			"type" : "line",
-			"source" : "esri",
-			"source-layer" : "Boundary line",
-			"filter" : ["==", "_symbol", 10],
-			"minzoom" : 16,
-			"layout" : {
-				"line-join" : "round"
-			},
-			"paint" : {
-				"line-color" : "#9DA0A2",
-				"line-width" : {
-					"base" : 1.2,
-					"stops" : [[14, 1.6], [17, 1.6]]
-				},
-				"line-dasharray" : [6.0, 3.0]
-			}
-    }, {
-			"id" : "Boundary line/Admin1/1",
-			"type" : "line",
-			"source" : "esri",
-			"source-layer" : "Boundary line",
-			"filter" : ["==", "_symbol", 1],
-			"minzoom" : 3,
-			"layout" : {
-				"line-cap" : "round",
-				"line-join" : "round"
-			},
-			"paint" : {
-				"line-color" : "#D9D4BA",
-				"line-width" : {
-					"base" : 1.0,
-					"stops" : [[4, 0.3325], [14, 7], [17, 7]]
-				}
-			}
-		}, {
-			"id" : "Boundary line/Admin0/1",
-			"type" : "line",
-			"source" : "esri",
-			"source-layer" : "Boundary line",
-			"filter" : ["==", "_symbol", 0],
-			"minzoom" : 1,
-			"layout" : {
-				"line-cap" : "round",
-				"line-join" : "round"
-			},
-			"paint" : {
-				"line-color" : "#CCC4A9",
-				"line-width" : {
-					"base" : 1.2,
-					"stops" : [[1, 0.665], [14, 9.33333], [17, 9.33333]]
-				}
-			}
-        }, {
-			"id" : "Boundary line/Admin5",
-			"type" : "line",
-			"source" : "esri",
-			"source-layer" : "Boundary line",
-			"filter" : ["==", "_symbol", 5],
-			"minzoom" : 16,
-			"layout" : {
-				"line-cap" : "round",
-				"line-join" : "round"
-			},
-			"paint" : {
-				"line-color" : "#9C9C9C",
-				"line-width" : {
-					"base" : 1.2,
-					"stops" : [[14, 1.33333], [17, 1.33333]]
-				},
-				"line-dasharray" : [6.66667, 4]
-			}
-        }, {
-			"id" : "Boundary line/Admin4",
-			"type" : "line",
-			"source" : "esri",
-			"source-layer" : "Boundary line",
-			"filter" : ["==", "_symbol", 4],
-			"minzoom" : 16,
-			"layout" : {
-				"line-cap" : "round",
-				"line-join" : "round"
-			},
-			"paint" : {
-				"line-color" : "#9C9C9C",
-				"line-width" : {
-					"base" : 1.2,
-					"stops" : [[14, 1.33333], [17, 1.33333]]
-				},
-				"line-dasharray" : [6.66667, 4]
-			}
-        }, {
-			"id" : "Boundary line/Admin3",
-			"type" : "line",
-			"source" : "esri",
-			"source-layer" : "Boundary line",
-			"filter" : ["==", "_symbol", 3],
-			"minzoom" : 16,
-			"layout" : {
-				"line-cap" : "round",
-				"line-join" : "round"
-			},
-			"paint" : {
-				"line-color" : "#9C9C9C",
-				"line-width" : {
-					"base" : 1.2,
-					"stops" : [[14, 1.33333], [17, 1.33333]]
-				},
-				"line-dasharray" : [6.66667, 4]
-			}
-        }, {
-			"id" : "Boundary line/Admin2/0",
-			"type" : "line",
-			"source" : "esri",
-			"source-layer" : "Boundary line",
-			"filter" : ["==", "_symbol", 2],
-			"minzoom" : 10,
-			"layout" : {
-				"line-join" : "round"
-			},
-			"paint" : {
-				"line-color" : "#828282",
-				"line-dasharray" : [8, 5.33333],
-				"line-width" : {
-					"base" : 1.2,
-					"stops" : [[8, 0.5], [14, 1.33333], [17, 1.33333]]
-				}
-			}
-        }, {
-			"id" : "Boundary line/Admin1/0",
-			"type" : "line",
-			"source" : "esri",
-			"source-layer" : "Boundary line",
-			"filter" : ["==", "_symbol", 1],
-			"minzoom" : 3,
-			"layout" : {
-				"line-cap" : "round",
-				"line-join" : "round"
-			},
-			"paint" : {
-				"line-color" : {
-					"stops" : [[3, "#c8c8c8"], [4, "#828282"]]
-				},
-				"line-width" : {
-					"base" : 1.0,
-					"stops" : [[4, 0.3325], [14, 1.33333], [17, 1.33333]]
-				}
-			}
-		}, {
-			"id" : "Boundary line/Admin0/0",
-			"type" : "line",
-			"source" : "esri",
-			"source-layer" : "Boundary line",
-			"filter" : ["==", "_symbol", 0],
-			"minzoom" : 1,
-			"layout" : {
-				"line-cap" : "round",
-				"line-join" : "round"
-			},
-			"paint" : {
-				"line-color" : {
-					"stops" : [[1, "#bfb89f"], [3, "#686868"]]
-				},
-				"line-width" : {
-					"base" : 1.2,
-					"stops" : [[1, 0.665], [14, 1.33333], [17, 1.33333]]
-				}
-			}
-		}
-	]
-}
+    var simple = {
+      "version" : 8,
+      "sources" : {
+        "esri" : {
+          "type" : "vector",
+          "url" : "https://basemaps.arcgis.com/b2/arcgis/rest/services/World_Basemap/VectorTileServer"
+        }
+      },
+      "layers" : [{
+        "id" : "Boundary line/Disputed admin5",
+        "type" : "line",
+        "source" : "esri",
+        "source-layer" : "Boundary line",
+        "filter" : ["==", "_symbol", 11],
+        "minzoom" : 16,
+        "layout" : {
+          "line-join" : "round"
+        }
+      ]
+    }
+  }
 
 	var map = new mapboxgl.Map({
     container: 'map',
