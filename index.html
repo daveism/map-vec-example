@@ -22,7 +22,34 @@
   	},
   	"type": "background",
   	"id": "background"
-  }, {
+  },
+  {
+  		"layout": {
+  			"text-letter-spacing": 0.05,
+  			"symbol-avoid-edges": true,
+  			"text-allow-overlap": false,
+  			"icon-padding": 1,
+  			"text-padding": 1,
+  			"text-font": ["Arial Regular"],
+  			"text-anchor": "center",
+  			"icon-image": "City small scale/x large admin0 capital",
+  			"text-field": "{_name}",
+  			"text-size": 12,
+  			"text-max-width": 8
+  		},
+  		"paint": {
+  			"text-color": "#dddcde",
+  			"text-halo-width": 1.33,
+  			"text-halo-color": "#414042"
+  		},
+  		"filter": ["==", "_symbol", 0],
+  		"source": "esri",
+  		"source-layer": "City small scale",
+  		"maxzoom": 10,
+  		"type": "symbol",
+  		"id": "City small scale/x large admin0 capital"
+  	},
+  {
   	"layout": {},
   	"paint": {
   		"fill-color": "#474648"
@@ -55,7 +82,7 @@ var map = new mapboxgl.Map({
 
 // When a click event occurs on a feature in the states layer, open a popup at the
 // location of the click, with description HTML from its properties.
-map.on('click', 'Land', function (e) {
+map.on('click', 'City small scale', function (e) {
   console.log(e.features[0].properties)
     new mapboxgl.Popup()
         .setLngLat(e.lngLat)
