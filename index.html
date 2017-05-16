@@ -16,48 +16,25 @@
 "glyphs":"https://www.arcgis.com/sharing/rest/content/items/850db44b9eb845d3bd42b19e8aa7a024/resources/styles/../fonts/{fontstack}/{range}.pbf",
 "sources":{"esri":{"url":"https://basemaps.arcgis.com/b2/arcgis/rest/services/World_Basemap/VectorTileServer","type":"vector"}},
 "layers" : [
-
   {
-      "id" : "Continent fill",
-      "type" : "fill",
-      "source" : "esri",
-      "source-layer" : "Continent",
-      "filter" : ["==", "_symbol", 0],
-      "minzoom" : 0,
-      "layout" : {},
-      "paint" : {
-        "fill-color" : "#F2EFCC"
-      }
-    }
-    , {
-    "id" : "Continent",
-    "type" : "symbol",
-    "source" : "esri",
-    "source-layer" : "Continent",
-    "maxzoom" : 2,
-    "layout" : {
-      "symbol-avoid-edges" : true,
-      "icon-image" : "Continent",
-      "icon-allow-overlap" : true,
-      "icon-padding" : 1,
-      "text-font" : ["Arial Regular"],
-              "text-size" : {
-        "stops" : [[0, 10], [1, 12]]
-      },
-      "text-anchor" : "center",
-      "text-letter-spacing" : 0.050000,
-      "text-max-width" : 8,
-      "text-field" : "{_name_global}",
-              "text-transform" : "uppercase",
-      "text-padding" : 1
-    },
-    "paint" : {
-      "text-color" : "#828282",
-      "text-halo-color" : "#F5F2DC",
-      "text-halo-width" : 2
-    }
+  	"paint": {
+  		"background-color": "#222326"
+  	},
+  	"type": "background",
+  	"id": "background"
+  }, {
+  	"layout": {},
+  	"paint": {
+  		"fill-color": "#474648"
+  	},
+  	"source": "esri",
+  	"minzoom": 0,
+  	"source-layer": "Land",
+  	"type": "fill",
+  	"id": "Land"
   }
-],"version":8,
+  ],
+"version":8,
  "sources": {
     "esri": {
       "type": "vector",
