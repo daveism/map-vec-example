@@ -70,6 +70,11 @@ map.on('click', 'Road', function (e) {
         .addTo(map);
 });
 
+// Change the cursor to a pointer when the mouse is over the states layer.
+map.on('mouseenter', 'Road', function () {
+    map.getCanvas().style.cursor = 'pointer';
+});
+
     </script>
 </body>
 </html>
