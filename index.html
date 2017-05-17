@@ -67,7 +67,7 @@ var map = new mapboxgl.Map({
 
 // When a click event occurs on a feature in the states layer, open a popup at the
 // location of the click, with description HTML from its properties.
-map.on('click', 'City small scale', function (e) {
+map.on('click', 'Road', function (e) {
   console.log(e.features[0].properties)
     new mapboxgl.Popup()
         .setLngLat(e.lngLat)
