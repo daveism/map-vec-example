@@ -24,27 +24,23 @@
   	"id": "background"
   },
   {
-	"layout": {
-		"line-cap": "round",
-		"line-join": "round"
-	},
-	"paint": {
-		"line-color": "#5f5e60",
-		"line-width": {
-			"base": 1.2,
-			"stops": [
-				[4, 0.75],
-				[14, 5.33],
-				[17, 10.33]
-			]
-		}
-	},
-	"source": "esri",
-	"minzoom": 0,
-	"source-layer": "Road",
-	"type": "line",
-	"id": "Road"
-}
+    "id": "Road/Highway/0",
+    "type": "line",
+    "source": "esri",
+    "source-layer": "Road",
+    "filter": [
+      "all"
+    ],
+    "paint": {
+      "line-width": 5,
+      "line-color": "rgba(44, 21, 123, 1)"
+    },
+    "minzoom": 0,
+    "layout": {
+      "visibility": "visible"
+    },
+    "maxzoom": 22
+  }
   ],
 "version":8,
  "sources": {
@@ -66,7 +62,7 @@ var map = new mapboxgl.Map({
 
 // Add zoom and rotation controls to the map.
 map.addControl(new mapboxgl.NavigationControl());
- 
+
 // When a click event occurs on a feature in the states layer, open a popup at the
 // location of the click, with description HTML from its properties.
 map.on('click', 'Road', function (e) {
