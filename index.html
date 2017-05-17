@@ -24,31 +24,28 @@
   	"id": "background"
   },
   {
-  		"layout": {
-  			"text-letter-spacing": 0.05,
-  			"symbol-avoid-edges": true,
-  			"text-allow-overlap": false,
-  			"icon-padding": 1,
-  			"text-padding": 1,
-  			"text-font": ["Arial Regular"],
-  			"text-anchor": "center",
-  			"icon-image": "City small scale/x large admin0 capital",
-  			"text-field": "{_name}",
-  			"text-size": 12,
-  			"text-max-width": 8
-  		},
-  		"paint": {
-  			"text-color": "#dddcde",
-  			"text-halo-width": 1.33,
-  			"text-halo-color": "#414042"
-  		},
-  		"filter": ["==", "_symbol", 0],
-  		"source": "esri",
-  		"source-layer": "City small scale",
-      "minzoom": 0,
-  		"type": "symbol",
-  		"id": "City small scale/x large admin0 capital"
+  	"layout": {
+  		"line-cap": "round",
+  		"line-join": "round"
   	},
+  	"paint": {
+  		"line-color": "#5d5c5e",
+  		"line-width": {
+  			"base": 1.2,
+  			"stops": [
+  				[11, 0.75],
+  				[14, 2.47],
+  				[17, 4.47]
+  			]
+  		}
+  	},
+  	"filter": ["==", "_symbol", 5],
+  	"source": "esri",
+  	"minzoom": 11,
+  	"source-layer": "Road",
+  	"type": "line",
+  	"id": "Road/Minor/0"
+  },
   {
   	"layout": {},
   	"paint": {
