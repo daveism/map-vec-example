@@ -11,44 +11,35 @@
 
     <script>
 
-	var simple = {
-"layers" : [
-  {
-  	"paint": {
-  		"background-color": "#222326"
-  	},
-  	"type": "background",
-  	"id": "background"
-  },
-  {
-    "id": "Road/Highway/0",
-    "type": "line",
-    "source": "esri",
-    "source-layer": "Road",
-    "filter": [
-      "all"
-    ],
-    "paint": {
-      "line-width": 5,
-      "line-color": "rgba(44, 21, 123, 1)"
-    },
-    "minzoom": 0,
-    "layout": {
-      "visibility": "visible"
-    },
-    "maxzoom": 22
-  }
-  ],
-"version":8,
- "sources": {
-    "esri": {
-      "type": "vector",
-      "tiles": ["https://basemaps.arcgis.com/b2/arcgis/rest/services/World_Basemap/VectorTileServer/tile/{z}/{x}/{y}.pbf"]
-    }
-  }
-}
-
-	;
+    var simple = {
+      "version":8,
+      "sources": {
+        "esri": {
+          "type": "vector",
+          "tiles": ["https://basemaps.arcgis.com/b2/arcgis/rest/services/World_Basemap/VectorTileServer/tile/{z}/{x}/{y}.pbf"]
+        }
+      },
+      "layers" : [
+        {
+          "id": "Road/Highway/0",
+          "type": "line",
+          "source": "esri",
+          "source-layer": "Road",
+          "filter": [
+            "all"
+          ],
+          "paint": {
+            "line-width": 5,
+            "line-color": "rgba(44, 21, 123, 1)"
+          },
+          "minzoom": 0,
+          "layout": {
+            "visibility": "visible"
+          },
+          "maxzoom": 22
+        }
+      ]
+    };
 
 var map = new mapboxgl.Map({
     container: 'map',
