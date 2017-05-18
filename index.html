@@ -12,34 +12,73 @@
     <script>
 
     var simple = {
-      "version":8,
-      "sources": {
-        "esri": {
-          "type": "vector",
-          "tiles": ["https://basemaps.arcgis.com/b2/arcgis/rest/services/World_Basemap/VectorTileServer/tile/{z}/{x}/{y}.pbf"]
-        }
-      },
-      "layers" : [
-        {
-          "id": "Road/Highway/0",
-          "type": "line",
-          "source": "esri",
-          "source-layer": "Road",
-          "filter": [
-            "all"
-          ],
-          "paint": {
-            "line-width": 5,
-            "line-color": "rgba(44, 21, 123, 1)"
-          },
-          "minzoom": 0,
-          "layout": {
-            "visibility": "visible"
-          },
-          "maxzoom": 22
-        }
-      ]
-    };
+	"version": 8,
+	"sprite": "https://www.arcgis.com/sharing/rest/content/items/4e1efe48af40464d9670ff649df30947/resources/styles/../sprites/sprite",
+	"glyphs": "https://www.arcgis.com/sharing/rest/content/items/4e1efe48af40464d9670ff649df30947/resources/styles/../fonts/{fontstack}/{range}.pbf",
+	"sources": {
+		"esri": {
+			"type": "vector",
+			"url": "http://tiles.arcgis.com/tiles/PwLrOgCfU0cYShcG/arcgis/rest/services/BRF_Ag_Lands_assessment_OvSc1/VectorTileServer"
+		}
+	},
+	"layers": [{
+		"id": "BRF_ParcelAnalysis_proj2/≤13.900000",
+		"type": "fill",
+		"source": "esri",
+		"source-layer": "BRF_ParcelAnalysis_proj2",
+		"filter": ["==", "_symbol", 2],
+		"layout": {},
+		"paint": {
+			"fill-color": "#F5F500",
+			"fill-outline-color": "#343434"
+		}
+	}, {
+		"id": "BRF_ParcelAnalysis_proj2/≤45.150000",
+		"type": "fill",
+		"source": "esri",
+		"source-layer": "BRF_ParcelAnalysis_proj2",
+		"filter": ["==", "_symbol", 3],
+		"layout": {},
+		"paint": {
+			"fill-color": "#F5B800",
+			"fill-outline-color": "#343434"
+		}
+	}, {
+		"id": "BRF_ParcelAnalysis_proj2/≤114.700000",
+		"type": "fill",
+		"source": "esri",
+		"source-layer": "BRF_ParcelAnalysis_proj2",
+		"filter": ["==", "_symbol", 4],
+		"layout": {},
+		"paint": {
+			"fill-color": "#F57A00",
+			"fill-outline-color": "#343434"
+		}
+	}, {
+		"id": "BRF_ParcelAnalysis_proj2/≤343.840000",
+		"type": "fill",
+		"source": "esri",
+		"source-layer": "BRF_ParcelAnalysis_proj2",
+		"filter": ["==", "_symbol", 5],
+		"layout": {},
+		"paint": {
+			"fill-color": "#F53D00",
+			"fill-outline-color": "#343434"
+		}
+	}, {
+		"id": "BRF_ParcelAnalysis_proj2/≤1250.900000",
+		"type": "fill",
+		"source": "esri",
+		"source-layer": "BRF_ParcelAnalysis_proj2",
+		"filter": ["==", "_symbol", 6],
+		"layout": {},
+		"paint": {
+			"fill-color": "#F50000",
+			"fill-outline-color": "#343434"
+		}
+	}],
+	"_ssl": false
+}
 
 var map = new mapboxgl.Map({
     container: 'map',
@@ -53,7 +92,7 @@ map.addControl(new mapboxgl.NavigationControl());
 
 // When a click event occurs on a feature in the states layer, open a popup at the
 // location of the click, with description HTML from its properties.
-map.on('click', 'Road', function (e) {
+map.on('click', 'BRF_ParcelAnalysis_proj2', function (e) {
   console.log(e.features[0].properties)
     new mapboxgl.Popup()
         .setLngLat(e.lngLat)
@@ -61,10 +100,10 @@ map.on('click', 'Road', function (e) {
         .addTo(map);
 });
 
-// Change the cursor to a pointer when the mouse is over the states layer.
-map.on('mouseenter', 'Road', function () {
-    map.getCanvas().style.cursor = 'pointer';
-});
+// // Change the cursor to a pointer when the mouse is over the states layer.
+// map.on('mouseenter', 'Road', function () {
+//     map.getCanvas().style.cursor = 'pointer';
+// });
 
     </script>
 </body>
