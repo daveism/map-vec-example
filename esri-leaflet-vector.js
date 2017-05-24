@@ -568,6 +568,7 @@
 	}
 
 	function formatStyle (style, metadata, styleUrl) {
+		console.log(style.sources.esri.url)
 	  // if a relative path is referenced, the default style can be found in a standard location
 	  if (style.sources.esri.url && style.sources.esri.url.indexOf('http') === -1) {
 	    style.sources.esri.url = styleUrl.replace('/resources/styles/root.json', '');
