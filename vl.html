@@ -1,0 +1,30 @@
+<html>
+<head>
+  <meta charset=utf-8 />
+  <title>Esri Vector Basemap</title>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+
+  <!-- Load libraries from CDN -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.0.3"></script>
+
+  <!-- Esri Leaflet and Esri Leaflet Vector -->
+  <script src="https://unpkg.com/esri-leaflet@2.0.8"></script>
+  <script src="https://unpkg.com/esri-leaflet-vector@1.0.7"></script>
+
+  <style>
+    body {margin:0;padding:0;}
+    #map {position: absolute;top:0;bottom:0;right:0;left:0;}
+  </style>
+</head>
+<body>
+
+<div id="map"></div>
+
+<script>
+  var map = L.map('map').setView([ 40.706, -73.926], 14);
+  L.esri.Vector.layer('674b98fb86074ab0a0925943b51702c4').addTo(map);
+</script>
+
+</body>
+</html>
