@@ -546,6 +546,7 @@
 	};
 
 	function fetchMetadata (url, context) {
+		console.log(url)
 	  esriLeaflet.request(url, {}, function (error, style) {
 	    if (!error) {
 	      esriLeaflet.request(style.sources.esri.url, {}, function (error, tileMetadata) {
