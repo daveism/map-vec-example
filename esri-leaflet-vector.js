@@ -593,7 +593,7 @@
 	    description: metadata.description,
 	    name: metadata.name
 	  };
-
+		console.log(style.sources.esri)
 	  if (style.glyphs.indexOf('http') === -1) {
 	    // set paths to sprite and glyphs
 	    style.glyphs = styleUrl.replace('styles/root.json', style.glyphs.replace('../', ''));
