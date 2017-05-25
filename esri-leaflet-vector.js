@@ -702,8 +702,8 @@
 
 	      esriLeaflet.request(itemMetadataUrl, {}, function (error, metadata) {
 	        if (!error) {
-	          tileUrl = metadata.url;
-
+	          tileUrl = metadata.url.replace('http','https');
+						tileUrl =
 	          // custom tileset published using ArcGIS Pro
 	          if (tileUrl.indexOf('basemaps.arcgis.com') === -1) {
 	            this._customTileset = true;
